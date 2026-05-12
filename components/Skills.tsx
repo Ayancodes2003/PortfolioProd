@@ -44,24 +44,27 @@ export default function Skills() {
       </div>
 
       {/* Row 1 - Moves Left */}
-      <motion.div
-        animate={{ x: ["0%", "-50%"] }}
-        transition={{ ease: "linear", duration: 140, repeat: Infinity }}
-        className="flex gap-8 md:gap-16 whitespace-nowrap px-6 w-max will-change-transform"
-      >
-        {multiply(topRow, 4).map((skill, i) => (
-          <h2
-            key={i}
-            style={{ WebkitTextStroke: "2px rgba(255,255,255,0.3)" }}
-            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-transparent uppercase tracking-tighter hover:text-white hover:opacity-100 transition-all duration-300 cursor-default"
-          >
-            {skill}
-          </h2>
-        ))}
-      </motion.div>
+      <div className="overflow-hidden">
+        <motion.div
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ ease: "linear", duration: 140, repeat: Infinity }}
+          className="flex gap-8 md:gap-16 whitespace-nowrap px-6 w-max will-change-transform"
+        >
+          {multiply(topRow, 4).map((skill, i) => (
+            <h2
+              key={i}
+              style={{ WebkitTextStroke: "2px rgba(255,255,255,0.3)" }}
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black text-transparent uppercase tracking-tighter hover:text-white hover:opacity-100 transition-all duration-300 cursor-default"
+            >
+              {skill}
+            </h2>
+          ))}
+        </motion.div>
+      </div>
 
       {/* Row 2 - Moves Right */}
-      <motion.div
+      <div className="overflow-hidden">
+        <motion.div
         animate={{ x: ["-50%", "0%"] }}
         transition={{ ease: "linear", duration: 170, repeat: Infinity }}
         className="flex gap-8 md:gap-16 whitespace-nowrap px-6 w-max will-change-transform"
@@ -69,29 +72,32 @@ export default function Skills() {
         {multiply(middleRow, 4).map((skill, i) => (
           <h2
             key={i}
-            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white opacity-20 uppercase tracking-tighter hover:opacity-100 transition-opacity duration-300 cursor-default"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black text-white opacity-20 uppercase tracking-tighter hover:opacity-100 transition-opacity duration-300 cursor-default"
           >
             {skill}
           </h2>
         ))}
       </motion.div>
+      </div>
 
       {/* Row 3 - Moves Left (Faster) */}
-      <motion.div
-        animate={{ x: ["0%", "-50%"] }}
-        transition={{ ease: "linear", duration: 130, repeat: Infinity }}
-        className="flex gap-8 md:gap-16 whitespace-nowrap px-6 w-max will-change-transform"
-      >
-        {multiply(bottomRow, 4).map((skill, i) => (
-          <h2
-            key={i}
-            style={{ WebkitTextStroke: "2px rgba(255,255,255,0.3)" }}
-            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-transparent uppercase tracking-tighter hover:text-white hover:opacity-100 transition-all duration-300 cursor-default"
-          >
-            {skill}
-          </h2>
-        ))}
-      </motion.div>
+      <div className="overflow-hidden">
+        <motion.div
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ ease: "linear", duration: 130, repeat: Infinity }}
+          className="flex gap-8 md:gap-16 whitespace-nowrap px-6 w-max will-change-transform"
+        >
+          {multiply(bottomRow, 4).map((skill, i) => (
+            <h2
+              key={i}
+              style={{ WebkitTextStroke: "2px rgba(255,255,255,0.3)" }}
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black text-transparent uppercase tracking-tighter hover:text-white hover:opacity-100 transition-all duration-300 cursor-default"
+            >
+              {skill}
+            </h2>
+          ))}
+        </motion.div>
+      </div>
 
       {/* CTA Button */}
       <div className="mt-16 flex flex-col items-center gap-6">
@@ -107,7 +113,7 @@ export default function Skills() {
         <button
           type="button"
           onClick={scrollToSelectedWorks}
-          className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-gradient-to-r from-sky-500/10 via-white/10 to-cyan-500/10 px-8 py-4 text-sm font-semibold uppercase tracking-[0.3em] text-white transition-all duration-300 hover:border-white/20 hover:bg-gradient-to-r hover:from-sky-400/15 hover:to-cyan-400/15 hover:text-white hover:scale-[1.01] hover-target focus:outline-none focus:ring-2 focus:ring-sky-400/30"
+          className="inline-flex w-full max-w-xs justify-center items-center gap-3 rounded-full border border-white/10 bg-gradient-to-r from-sky-500/10 via-white/10 to-cyan-500/10 px-8 py-4 text-sm font-semibold uppercase tracking-[0.3em] text-white transition-all duration-300 hover:border-white/20 hover:bg-gradient-to-r hover:from-sky-400/15 hover:to-cyan-400/15 hover:text-white hover:scale-[1.01] hover-target focus:outline-none focus:ring-2 focus:ring-sky-400/30 sm:w-auto"
         >
           Explore Selected Works
         </button>

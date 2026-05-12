@@ -14,6 +14,42 @@
 			"command": "taskkill /PID 18028 /F ; npm run dev",
 			"isBackground": true,
 			"problemMatcher": []
+		},
+		{
+			"label": "Build Portfolio",
+			"type": "shell",
+			"command": "npm run build",
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			]
+		},
+		{
+			"label": "Commit and Push Portfolio",
+			"type": "shell",
+			"command": "git add README.md app/globals.css components/CustomCursor.tsx components/Hero.tsx components/Manifesto.tsx components/Skills.tsx next.config.ts vercel.json .vscode/tasks.json && git commit -m \"Add mobile responsiveness and Vercel deployment config\" && git push origin main",
+			"isBackground": false,
+			"problemMatcher": [
+				"$git"
+			]
+		},
+		{
+			"label": "Commit and Push Portfolio",
+			"type": "shell",
+			"command": "git add README.md app/globals.css components/CustomCursor.tsx components/Hero.tsx components/Manifesto.tsx components/Skills.tsx next.config.ts vercel.json .vscode/tasks.json ; git commit -m \"Add mobile responsiveness and Vercel deployment config\" ; git push origin main",
+			"isBackground": false,
+			"problemMatcher": [
+				"$git"
+			]
+		},
+		{
+			"label": "Git Commit and Push Portfolio",
+			"type": "shell",
+			"command": "git add README.md app/globals.css components/CustomCursor.tsx components/Hero.tsx components/Manifesto.tsx components/Skills.tsx next.config.ts vercel.json .vscode/tasks.json ; git commit -m \"Add mobile responsiveness and Vercel deployment config\" ; git push origin main",
+			"isBackground": false,
+			"problemMatcher": [
+				"$git"
+			]
 		}
 	]
 }

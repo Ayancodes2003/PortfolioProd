@@ -46,7 +46,7 @@ export default function Manifesto() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 1, delay: img.delay, ease: [0.16, 1, 0.3, 1] }}
           whileHover={{ scale: 1.05, zIndex: 50 }}
-          className={`group rounded-2xl overflow-hidden shadow-2xl z-0 border-2 border-white/5 ${img.className}`}
+          className={`hidden md:block group rounded-2xl overflow-hidden shadow-2xl z-0 border-2 border-white/5 ${img.className}`}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img 
@@ -78,7 +78,7 @@ export default function Manifesto() {
                   ease: [0.16, 1, 0.3, 1],
                   delay: idx * 0.15,
                 }}
-                className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500 mix-blend-screen"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500 mix-blend-screen"
               >
                 {value}
               </motion.h2>

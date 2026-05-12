@@ -7,8 +7,20 @@ export default function CustomCursor() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [useCustomCursor, setUseCustomCursor] = useState(false);
 
   useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const isTouchDevice = window.matchMedia("(hover: none), (pointer: coarse)").matches;
+    setUseCustomCursor(!isTouchDevice);
+
+    if (isTouchDevice) {
+      return;
+    }
+
     const updateMousePosition = (e: MouseEvent) => {
       mouseX.set(e.clientX - 8);
       mouseY.set(e.clientY - 8);
@@ -34,6 +46,10 @@ export default function CustomCursor() {
       window.removeEventListener("mouseover", handleMouseOver);
     };
   }, [mouseX, mouseY]);
+
+  if (!useCustomCursor) {
+    return null;
+  }
 
   return (
     <motion.div

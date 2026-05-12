@@ -33,7 +33,7 @@ export default function Hero() {
                         animate={{ opacity: 1, scale: 1, rotate: -5 }}
                         whileHover={{ scale: 1.05, rotate: 0, zIndex: 50 }}
                         transition={{ duration: 0.6, delay: 0.5, type: "spring", stiffness: 100 }}
-                        className="group absolute right-0 md:right-10 lg:right-20 xl:right-32 top-0 sm:top-[-10px] md:top-[-20px] w-32 h-48 sm:w-48 sm:h-64 md:w-56 md:h-72 lg:w-64 lg:h-[22rem] xl:w-[20rem] xl:h-[26rem] rounded-2xl overflow-hidden shadow-2xl z-20 border-4 border-[#0a0a0a] will-change-transform"
+                        className="hidden md:flex group absolute right-0 md:right-10 lg:right-20 xl:right-32 top-0 sm:top-[-10px] md:top-[-20px] w-32 h-48 sm:w-48 sm:h-64 md:w-56 md:h-72 lg:w-64 lg:h-[22rem] xl:w-[20rem] xl:h-[26rem] rounded-2xl overflow-hidden shadow-2xl z-20 border-4 border-[#0a0a0a] will-change-transform"
                     >
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src="/personal/image1.jpg" alt="Varun Dhondi" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" />
@@ -45,6 +45,18 @@ export default function Hero() {
                             </p>
                         </div>
                     </motion.div>
+
+                    <div className="mt-12 md:hidden flex justify-center">
+                      <div className="group relative w-full max-w-xs rounded-3xl overflow-hidden shadow-2xl border-4 border-[#0a0a0a]">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src="/personal/image1.jpg" alt="Varun Dhondi" className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" />
+                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center p-4 text-center">
+                          <p className="text-white font-bold text-sm leading-relaxed italic drop-shadow-[0_4px_4px_rgba(0,0,0,1)]">
+                            &quot;Engineering the future, one line of code at a time.&quot;
+                          </p>
+                        </div>
+                      </div>
+                    </div>
 
                     {/* Name */}
                     <div className="flex flex-col">
