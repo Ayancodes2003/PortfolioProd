@@ -7,49 +7,38 @@ import { FiArrowUpRight } from "react-icons/fi";
 
 const projects = [
   {
-    title: "Claude SEO Agent",
-    role: "AI Tooling",
-    year: "2026",
-    color: "from-emerald-500 to-teal-500",
-    url: "https://github.com/varundhondi/seo-audit-report",
-    description: "A comprehensive SEO analysis skill for Claude Code that automates technical SEO, on-page analysis, and AI search optimization.",
-    working: "It operates via a suite of AI subagents that run parallel audits (e.g., technical, content, schema). It generates an interactive report with actionable insights, automates multi-language hreflang validation, and creates programmatic SEO plans with strict quality gates.",
-    features: ["Parallel Subagent Architecture", "Programmatic SEO Planning", "Schema Generation", "Core Web Vitals Analysis"],
-    bgImage: "/projects/seo-audit.png"
+    title: "Chronos",
+    role: "Database Migration",
+    year: "2025",
+    color: "from-amber-500 to-orange-500",
+    url: "https://github.com/Ayancodes2003",
+    description: "Distributed Database Schema Migration Framework with Automated Rollback.",
+    working: "Architected a version-controlled database migration framework using DAG algorithms, integrating automated rollback with graph-based merge strategies to reduce migration conflicts.",
+    features: ["Python", "MongoDB", "DAG Algorithms", "CI/CD Rollback"],
+    bgImage: "/projects/chronos.png"
   },
   {
-    title: "Real-Time Sentiment Analytics",
-    role: "Data Engineering",
+    title: "SOMAR",
+    role: "Data Pipeline",
     year: "2025",
-    color: "from-red-600 to-rose-600",
-    url: "https://github.com/varundhondi/Real-Time-Sentiment-Analytics-Dashboard",
-    description: "A real-time dashboard that collects, analyzes, and visualizes public opinions from Twitter using NLP and machine learning.",
-    working: "It streams live tweets using the Tweepy API and applies TextBlob for NLP sentiment analysis. The interactive dashboard, built with Plotly Dash, visualizes sentiment trends, geolocation insights, and top keywords in real time, delivering actionable public relations intelligence.",
-    features: ["Live Twitter Streaming", "NLP Sentiment Scoring", "Geolocation Tracking", "Plotly Dash Visualizations"],
-    bgImage: "/projects/sentiment-analytics.png"
+    color: "from-orange-500 to-red-500",
+    url: "https://github.com/Ayancodes2003",
+    description: "Socio-Mobility Anomaly Recognition Framework detecting spatio-temporal anomalies.",
+    working: "Modeled a dual-pipeline data processing system fusing trajectory and event streams. Implemented clustering and sequential pattern mining modules to improve cross-stream anomaly correlation precision.",
+    features: ["Python", "ST-DBSCAN", "Prefix Span", "NLP", "Geo-spatial Processing"],
+    bgImage: "/projects/somar.png"
   },
   {
-    title: "AutoEDA-AI",
-    role: "Multi-Agent System",
+    title: "CryptoTracker Pro",
+    role: "Full-Stack Web App",
     year: "2025",
-    color: "from-blue-600 to-indigo-600",
-    url: "https://github.com/varundhondi/AutoEDA-AI-Multi-Agent-LLM-System-for-Natural-Language-Driven-Exploratory-Data-Analysis",
-    description: "A natural language-driven exploratory data analysis platform powered by a multi-agent LLM system.",
-    working: "Users ask questions in plain English. The system's Query Agent interprets the intent, the SQL Agent translates it to database queries, the Analysis Agent runs statistical and trend analysis, and the Visualization Agent generates interactive charts on the Streamlit dashboard.",
-    features: ["Natural Language to SQL", "Automated Data Analysis", "Interactive Plotly Dashboard", "CrewAI Multi-Agent Framework"],
-    bgImage: "/projects/autoeda.png"
-  },
-  {
-    title: "Diabetes AI Assistant",
-    role: "AI Health Tech",
-    year: "2025",
-    color: "from-purple-600 to-pink-600",
-    url: "https://github.com/varundhondi/Diabetes-AI-assistant",
-    description: "An AI-powered health management application helping users track, analyze, and understand diabetes-related data.",
-    working: "It accepts voice, text, and image inputs (e.g., food or wound images) to analyze patient health. It securely stores vital signs, medication history, and glucose levels in MongoDB, using AI to generate comprehensive PDF medical reports and personalized health insights.",
-    features: ["Voice & Text Input", "AI Image Analysis", "Medical Report Generation", "Secure Authentication"],
-    bgImage: "/projects/diabetes.png"
-  },
+    color: "from-yellow-500 to-amber-500",
+    url: "https://github.com/Ayancodes2003",
+    description: "Real-Time Portfolio Analytics and Recommender Platform.",
+    working: "Engineered a full-stack portfolio tracking system for 100+ assets with automated P&L analytics and millisecond-scale price updates. Optimized caching and API orchestration to reduce external calls.",
+    features: ["React", "TypeScript", "Supabase", "CoinGecko API"],
+    bgImage: "/projects/crypto.png"
+  }
 ];
 
 export default function Projects() {

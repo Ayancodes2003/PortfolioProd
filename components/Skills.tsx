@@ -4,13 +4,13 @@ import { useCallback } from "react";
 import { motion } from "framer-motion";
 
 const topRow = [
-  "PYTHON", "TYPESCRIPT", "REACT", "NEXT.JS", "TAILWIND", "FRAMER MOTION", "STREAMLIT"
+  "C/C++", "PYTHON", "JAVA", "BASH", "FASTAPI", "FLASK", "REST APIS"
 ];
 const middleRow = [
-  "LLMs", "CREWAI", "AGENTIC AI", "OPENAI", "CLAUDE API", "COMPUTER VISION", "NLP"
+  "POSTGRESQL", "MYSQL", "MONGODB", "PYTEST", "DOCKER", "AWS", "LINUX"
 ];
 const bottomRow = [
-  "FASTAPI", "MONGODB", "SQL", "DATA ANALYSIS", "SEO AUTOMATION", "SYSTEM DESIGN", "BACKEND"
+  "PYTORCH", "LANGCHAIN", "RAG", "NLP", "COMPUTER VISION", "SYSTEM DESIGN", "BACKEND"
 ];
 
 // Multiply by 3 so that the motion remains smooth while keeping DOM size smaller
@@ -113,15 +113,15 @@ export default function Skills() {
         <button
           type="button"
           onClick={scrollToSelectedWorks}
-          className="inline-flex w-full max-w-xs justify-center items-center gap-3 rounded-full border border-white/10 bg-gradient-to-r from-sky-500/10 via-white/10 to-cyan-500/10 px-8 py-4 text-sm font-semibold uppercase tracking-[0.3em] text-white transition-all duration-300 hover:border-white/20 hover:bg-gradient-to-r hover:from-sky-400/15 hover:to-cyan-400/15 hover:text-white hover:scale-[1.01] hover-target focus:outline-none focus:ring-2 focus:ring-sky-400/30 sm:w-auto"
+          className="inline-flex w-full max-w-xs justify-center items-center gap-3 rounded-full border border-white/10 bg-gradient-to-r from-amber-600/10 via-white/10 to-orange-500/10 px-8 py-4 text-sm font-semibold uppercase tracking-[0.3em] text-white transition-all duration-300 hover:border-white/20 hover:bg-gradient-to-r hover:from-amber-500/15 hover:to-orange-400/15 hover:text-white hover:scale-[1.01] hover-target focus:outline-none focus:ring-2 focus:ring-amber-400/30 sm:w-auto"
         >
           Explore Selected Works
         </button>
       </div>
 
       {/* Fade edges */}
-      <div className="absolute inset-y-0 left-0 w-24 md:w-64 bg-gradient-to-r from-[#050505] via-[#050505]/80 to-transparent pointer-events-none" />
-      <div className="absolute inset-y-0 right-0 w-24 md:w-64 bg-gradient-to-l from-[#050505] via-[#050505]/80 to-transparent pointer-events-none" />
+      <div className="absolute inset-y-0 left-0 w-24 md:w-64 bg-gradient-to-r from-[#0a0806] via-[#0a0806]/80 to-transparent pointer-events-none" />
+      <div className="absolute inset-y-0 right-0 w-24 md:w-64 bg-gradient-to-l from-[#0a0806] via-[#0a0806]/80 to-transparent pointer-events-none" />
     </section>
   );
 }

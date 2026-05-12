@@ -15,19 +15,19 @@ export default function Navbar() {
                 <Link href="/" className="hover-target relative z-10 block group">
                     <div className="relative flex items-center">
                         {/* Core text with extreme polish */}
-                        <span className="text-xl md:text-2xl font-black tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-blue-400 drop-shadow-[0_0_15px_rgba(59,130,246,0.4)] transition-all duration-500 group-hover:drop-shadow-[0_0_30px_rgba(59,130,246,0.9)]">
-                            VARUN
+                        <span className="text-xl md:text-2xl font-black tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-orange-200 to-amber-500 drop-shadow-[0_0_15px_rgba(245,158,11,0.4)] transition-all duration-500 group-hover:drop-shadow-[0_0_30px_rgba(245,158,11,0.9)]">
+                            AYAN
                         </span>
                         {/* Glowing aura that ignites on hover */}
-                        <span className="absolute top-0 left-0 text-xl md:text-2xl font-black tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-300 blur-xl opacity-0 group-hover:opacity-80 transition-opacity duration-700 pointer-events-none">
-                            VARUN
+                        <span className="absolute top-0 left-0 text-xl md:text-2xl font-black tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-400 blur-xl opacity-0 group-hover:opacity-80 transition-opacity duration-700 pointer-events-none">
+                            AYAN
                         </span>
                         {/* Tech accent line */}
-                        <div className="absolute -bottom-2 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-400 to-transparent group-hover:w-full transition-all duration-700 ease-out"></div>
+                        <div className="absolute -bottom-2 left-0 w-0 h-[2px] bg-gradient-to-r from-amber-500 to-transparent group-hover:w-full transition-all duration-700 ease-out"></div>
                     </div>
                 </Link>
 
-                <div className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2 bg-[#050505]/40 backdrop-blur-2xl border border-white/10 p-1.5 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.5)] ring-1 ring-white/5">
+                <div className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2 bg-[#0a0806]/40 backdrop-blur-2xl border border-white/10 p-1.5 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.5)] ring-1 ring-white/5">
                     {[
                         { label: 'Skills', href: '#skills' },
                         { label: 'Projects', href: '#selected-works' },
@@ -49,13 +49,13 @@ export default function Navbar() {
                 </div>
 
                 <a 
-                    href="https://mail.google.com/mail/?view=cm&fs=1&to=varundhondi2235@gmail.com"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=ayanbiswadutta100@gmail.com"
                     target="_blank"
                     rel="noopener noreferrer" 
                     className="text-sm font-medium tracking-wide hover-target uppercase flex items-center gap-2 group relative z-10 mix-blend-difference text-white"
-                    aria-label="Compose email to varundhondi2235@gmail.com"
+                    aria-label="Compose email to ayanbiswadutta100@gmail.com"
                 >
-                    <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
                     Let&apos;s Talk
                 </a>
             </div>

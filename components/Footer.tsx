@@ -17,10 +17,10 @@ export default function Footer() {
 
         <h2 className="text-[12vw] sm:text-[10vw] font-bold tracking-tighter uppercase leading-none text-white hover:text-gray-300 transition-colors cursor-pointer hover-target">
           <a 
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=varundhondi2235@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=ayanbiswadutta100@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Compose email to varundhondi2235@gmail.com"
+            aria-label="Compose email to ayanbiswadutta100@gmail.com"
           >
             Let&apos;s Talk
           </a>
@@ -29,13 +29,13 @@ export default function Footer() {
         <div className="w-full mt-20 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
 
           <p className="text-gray-500 text-sm tracking-widest uppercase">
-            © {new Date().getFullYear()} Varun Dhondi
+            © {new Date().getFullYear()} Ayan Biswa Dutta
           </p>
 
           <div className="flex items-center gap-6 text-gray-400">
 
             <a
-              href="https://www.linkedin.com/in/varun-dhondi"
+              href="https://www.linkedin.com/in/ayan-biswa-dutta-065370248/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-all duration-300 hover:scale-110"
@@ -44,30 +44,12 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://github.com/varundhondi"
+              href="https://github.com/Ayancodes2003"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-all duration-300 hover:scale-110"
             >
               <GitHubLogoIcon width={24} height={24} />
-            </a>
-
-            <a
-              href="https://x.com/DhondiVarun"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-all duration-300 hover:scale-110"
-            >
-              <TwitterLogoIcon width={24} height={24} />
-            </a>
-
-            <a
-              href="https://www.instagram.com/varun_dhondi/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-all duration-300 hover:scale-110"
-            >
-              <InstagramLogoIcon width={24} height={24} />
             </a>
 
           </div>
