@@ -20,6 +20,7 @@ export default function Footer() {
             href="https://mail.google.com/mail/?view=cm&fs=1&to=varundhondi2235@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Compose email to varundhondi2235@gmail.com"
           >
             Let&apos;s Talk
           </a>

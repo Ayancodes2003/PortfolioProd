@@ -21,6 +21,9 @@ export default function CustomCursor() {
       return;
     }
 
+    const previousCursor = document.body.style.cursor;
+    document.body.style.cursor = "none";
+
     const updateMousePosition = (e: MouseEvent) => {
       mouseX.set(e.clientX - 8);
       mouseY.set(e.clientY - 8);
@@ -42,6 +45,7 @@ export default function CustomCursor() {
     window.addEventListener("mouseover", handleMouseOver);
 
     return () => {
+      document.body.style.cursor = previousCursor;
       window.removeEventListener("mousemove", updateMousePosition);
       window.removeEventListener("mouseover", handleMouseOver);
     };

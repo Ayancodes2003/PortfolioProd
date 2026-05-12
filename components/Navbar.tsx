@@ -53,6 +53,7 @@ export default function Navbar() {
                     target="_blank"
                     rel="noopener noreferrer" 
                     className="text-sm font-medium tracking-wide hover-target uppercase flex items-center gap-2 group relative z-10 mix-blend-difference text-white"
+                    aria-label="Compose email to varundhondi2235@gmail.com"
                 >
                     <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                     Let&apos;s Talk
