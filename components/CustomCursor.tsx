@@ -23,6 +23,7 @@ export default function CustomCursor() {
 
     const previousCursor = document.body.style.cursor;
     document.body.style.cursor = "none";
+    document.body.classList.add("custom-cursor-hidden");
 
     const updateMousePosition = (e: MouseEvent) => {
       mouseX.set(e.clientX - 8);
@@ -46,6 +47,7 @@ export default function CustomCursor() {
 
     return () => {
       document.body.style.cursor = previousCursor;
+      document.body.classList.remove("custom-cursor-hidden");
       window.removeEventListener("mousemove", updateMousePosition);
       window.removeEventListener("mouseover", handleMouseOver);
     };
