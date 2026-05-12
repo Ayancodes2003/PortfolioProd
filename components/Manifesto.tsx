@@ -56,7 +56,7 @@ export default function Manifesto() {
           />
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-start justify-center p-6 pt-12 text-center">
             <p className="text-white font-bold text-sm sm:text-base leading-relaxed italic drop-shadow-[0_4px_4px_rgba(0,0,0,1)]">
-              "{img.quote}"
+              &quot;{img.quote}&quot;
             </p>
           </div>
         </motion.div>

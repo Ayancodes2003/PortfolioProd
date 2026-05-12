@@ -23,7 +23,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans cursor-none selection:bg-white/20 selection:text-white bg-transparent">
+      <body suppressHydrationWarning className="min-h-full flex flex-col font-sans selection:bg-white/20 selection:text-white bg-transparent">
         <AnimatedBackground />
         {children}
       </body>

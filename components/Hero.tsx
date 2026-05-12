@@ -41,7 +41,7 @@ export default function Hero() {
                         {/* Overlay and Quote */}
                         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center p-4 sm:p-6 pb-8 text-center">
                             <p className="text-white font-bold text-sm sm:text-base leading-relaxed italic drop-shadow-[0_4px_4px_rgba(0,0,0,1)]">
-                                "Engineering the future, one line of code at a time."
+                                &quot;Engineering the future, one line of code at a time.&quot;
                             </p>
                         </div>
                     </motion.div>

@@ -143,7 +143,9 @@ export default function Projects() {
             <motion.div
               key={idx}
               id={idx === 0 ? "selected-works" : undefined}
-              ref={(node) => (projectCardsRef.current[idx] = node)}
+              ref={(node) => {
+                projectCardsRef.current[idx] = node;
+              }}
               data-project-index={idx}
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}

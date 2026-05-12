@@ -7,19 +7,41 @@ const GRID_ROWS = 5;
 const GRID_COLS = 5;
 const TOTAL_PIXELS = GRID_ROWS * GRID_COLS;
 
+function seededOffset(seed: number, range: number) {
+  const value = Math.sin(seed * 12.9898) * 43758.5453;
+  return (value - Math.floor(value) - 0.5) * range;
+}
+
+function seededDelay(seed: number) {
+  const value = Math.sin(seed * 78.233) * 43758.5453;
+  return (value - Math.floor(value)) * 0.15;
+}
+
 export default function PixelScatterImage({ src, alt }: { src: string; alt: string }) {
   const pixels = useMemo(() => {
-    const newPixels: { x: number; y: number; id: number }[] = [];
-    let id = 0;
+    const newPixels: {
+      delay: number;
+      rotate: number;
+      scatterX: number;
+      scatterY: number;
+      x: number;
+      y: number;
+      id: number;
+    }[] = [];
 
-    for (let row = 0; row < GRID_ROWS; row++) {
-      for (let col = 0; col < GRID_COLS; col++) {
+    for (let id = 0; id < TOTAL_PIXELS; id++) {
+      const row = Math.floor(id / GRID_COLS);
+      const col = id % GRID_COLS;
+
         newPixels.push({
+          delay: seededDelay(id + 1),
+          rotate: seededOffset(id + 3, 90),
+          scatterX: seededOffset(id + 5, 300),
+          scatterY: seededOffset(id + 7, 300),
           x: (col / (GRID_COLS - 1)) * 100,
           y: (row / (GRID_ROWS - 1)) * 100,
-          id: id++,
+          id,
         });
-      }
     }
 
     return newPixels;
@@ -28,7 +50,7 @@ export default function PixelScatterImage({ src, alt }: { src: string; alt: stri
   if (!src) return null;
 
   return (
-    <div className="absolute inset-0 w-full h-full overflow-hidden rounded-2xl">
+    <div aria-label={alt} role="img" className="absolute inset-0 w-full h-full overflow-hidden rounded-2xl">
       <AnimatePresence mode="popLayout" initial={false}>
         <motion.div
           key={src}
@@ -38,21 +60,14 @@ export default function PixelScatterImage({ src, alt }: { src: string; alt: stri
             gridTemplateRows: `repeat(${GRID_ROWS}, 1fr)`,
           }}
         >
-          {pixels.map((p) => {
-            // Tighter boundaries and faster delays for maximum smoothness
-            const randomX = (Math.random() - 0.5) * 300;
-            const randomY = (Math.random() - 0.5) * 300;
-            const randomRotate = (Math.random() - 0.5) * 90;
-            const randomDelay = Math.random() * 0.15;
-
-            return (
+          {pixels.map((p) => (
               <motion.div
                 key={p.id}
                 initial={{ 
                   opacity: 0, 
-                  x: randomX, 
-                  y: randomY, 
-                  rotateZ: randomRotate,
+                  x: p.scatterX, 
+                  y: p.scatterY, 
+                  rotateZ: p.rotate,
                   scale: 0 
                 }}
                 animate={{ 
@@ -64,15 +79,15 @@ export default function PixelScatterImage({ src, alt }: { src: string; alt: stri
                 }}
                 exit={{ 
                   opacity: 0, 
-                  x: randomX * 1.5, 
-                  y: randomY * 1.5, 
-                  rotateZ: randomRotate * 1.5,
+                  x: p.scatterX * 1.5, 
+                  y: p.scatterY * 1.5, 
+                  rotateZ: p.rotate * 1.5,
                   scale: 0 
                 }}
                 transition={{
                   duration: 0.5,
                   ease: [0.16, 1, 0.3, 1],
-                  delay: randomDelay,
+                  delay: p.delay,
                 }}
                 className="w-full h-full relative will-change-transform"
               >
@@ -85,8 +100,7 @@ export default function PixelScatterImage({ src, alt }: { src: string; alt: stri
                   }}
                 />
               </motion.div>
-            );
-          })}
+          ))}
         </motion.div>
       </AnimatePresence>
     </div>
